@@ -7,7 +7,7 @@ ClapTrap::ClapTrap(void): _name("noName"), _hitPoints(10), _energyPoints(10), _a
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-    std::cout << SMGREEN << "ClapTrap " << name << " default constructor called" << RESET << std::endl;
+    std::cout << SMGREEN << "ClapTrap " << name << " constructor called" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src)
@@ -30,7 +30,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
 
 ClapTrap::~ClapTrap(void)
 {
-    std::cout << RED << "ClapTrap destructor called" << RESET << std::endl;
+    std::cout << RED << "ClapTrap " << _name << " destructor called" << RESET << std::endl;
 }
 
 std::string ClapTrap::getName(void) const

@@ -1,10 +1,13 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
     ClapTrap a("Bob");
-    ClapTrap b ("John");
-	ClapTrap c(a);
+    ScavTrap b("John");
+	ClapTrap c;
+
+	c = a;
 
     a.attack("John");
 	std::cout << std::endl;
@@ -22,6 +25,7 @@ int main(void)
 	std::cout << std::endl;
     b.takeDamage(3);
 	std::cout << std::endl;
-	std::cout << c.getName() << std::endl;
+	b.guardGate();
+	std::cout << std::endl;
     return 0;
 }
