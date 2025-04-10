@@ -33,7 +33,6 @@ ClapTrap::~ClapTrap(void)
     std::cout << RED << "ClapTrap " << _name << " destructor called" << RESET << std::endl;
 }
 
-
 void ClapTrap::attack(const std::string& target)
 {
     if (!_hitPoints)
@@ -52,7 +51,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (!_hitPoints )
+    if (_hitPoints == 0)
     {
         std::cout << SMYELLOW << "Stop attacking this poor " << _name << " it's already dead !! " << RESET<< std::endl;
         return;
