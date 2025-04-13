@@ -22,6 +22,5 @@ int main(void)
 	std::cout << std::endl;
     b.takeDamage(3);
 	std::cout << std::endl;
-	std::cout << c.getName() << std::endl;
     return 0;
 }
