@@ -22,24 +22,24 @@ int main(void)
 {
     printHeader("Test : ClapTrap ScavTrap and FragTrap constructions");
     ClapTrap clap1("Clap");
-    ScavTrap scrap1("Scav");
+    ScavTrap scav1("Scav");
     FragTrap frag1("Frag");
 
     printHeader("Test : Attacks ans repare");
     clap1.attack("ennemy");
-    scrap1.attack("other ennemy");
+    scav1.attack("other ennemy");
     frag1.attack("another ennemy");
     clap1.beRepaired(5);
-    scrap1.beRepaired(10);
+    scav1.beRepaired(10);
     frag1.beRepaired(20);
 
     printHeader("Test : Damages");
     clap1.takeDamage(3);
-    scrap1.takeDamage(20);
+    scav1.takeDamage(20);
     frag1.takeDamage(30);
 
     printHeader("Test : Special functions");
-    scrap1.guardGate();
+    scav1.guardGate();
     frag1.highFivesGuys();
 
     printHeader("Test : Copy and affectation");
@@ -56,7 +56,7 @@ int main(void)
     frag4.highFivesGuys();
 
     printHeader("Test : No energy points");
-    FragTrap frag5("TiredFrag");
+    FragTrap frag5("NoEnergyFrag");
     for (int i = 0; i < 101; ++i)
         frag5.attack("Someone");
     frag5.highFivesGuys();

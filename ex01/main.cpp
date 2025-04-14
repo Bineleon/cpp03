@@ -21,39 +21,39 @@ int main(void)
 {
     printHeader("Test : ClapTrap and ScavTrap construction");
     ClapTrap clap1("Clap");
-    ScavTrap scrap1("Scav");
+    ScavTrap scav1("Scav");
 
     printHeader("Test : Attacks ans repare");
     clap1.attack("ennemy");
-    scrap1.attack("other ennemy");
+    scav1.attack("other ennemy");
     clap1.beRepaired(5);
-    scrap1.beRepaired(10);
+    scav1.beRepaired(10);
 
     printHeader("Test : Damages");
     clap1.takeDamage(3);
-    scrap1.takeDamage(20);
+    scav1.takeDamage(20);
 
     printHeader("Test : ScavTrap guard mode activation");
-    scrap1.guardGate();
+    scav1.guardGate();
 
     printHeader("Test : Copy and affectation");
-    ScavTrap scrap2(scrap1);
-    ScavTrap scrap3;
-    scrap3 = scrap1;
+    ScavTrap scav2(scav1);
+    ScavTrap scav3;
+    scav3 = scav1;
 
     printHeader("Test : No hit points");
-    ScavTrap scrap4("DeadScrap");
-    scrap4.takeDamage(200);
-    scrap4.attack("Someone");
-    scrap4.guardGate();
-    scrap4.beRepaired(10);
-    scrap4.guardGate();
+    ScavTrap scav4("DeadScav");
+    scav4.takeDamage(200);
+    scav4.attack("Someone");
+    scav4.guardGate();
+    scav4.beRepaired(10);
+    scav4.guardGate();
 
     printHeader("Test : No energy points");
-    ScavTrap scrap5("TiredScrap");
+    ScavTrap scav5("NoEnergyScav");
     for (int i = 0; i < 51; ++i)
-        scrap5.attack("Someone");
-    scrap5.guardGate();
+        scav5.attack("Someone");
+    scav5.guardGate();
 
     printHeader("Test : Destructors");
     return 0;

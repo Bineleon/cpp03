@@ -77,7 +77,8 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     if (!_hitPoints)
         std::cout << SMGREEN << "ClapTrap " << _name << " repaired itself and ROSE FROM THE DEAD 🧟🧟🧟 ! Gaining : " << amount <<  " hit points!" << RESET << std::endl;
-    std::cout << SMGREEN << "ClapTrap " << _name << " repaired itself" << ", gaining " << amount <<  " hit points!" << RESET << std::endl;
+    else 
+		std::cout << SMGREEN << "ClapTrap " << _name << " repaired itself" << ", gaining " << amount <<  " hit points!" << RESET << std::endl;
     _hitPoints += amount;
     _energyPoints--;
     displayPoints();
